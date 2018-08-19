@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <AssemblyName>dotnet_code_challenge.Test</AssemblyName>
+
+    <RootNamespace>dotnet_code_challenge.Test</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestFiles\Caulfield_Race1.xml" />
+    <None Remove="TestFiles\InvalidJson.json" />
+    <None Remove="TestFiles\InvalidXML.xml" />
+    <None Remove="TestFiles\Wolferhampton_Race1.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="TestFiles\Caulfield_Race1.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\InvalidJson.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\InvalidXML.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\Wolferhampton_Race1.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dotnet-code-challenge\dotnet-code-challenge.csproj" />
+  </ItemGroup>
+
+</Project>
